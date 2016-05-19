@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>React and ES6 Small Tips | 追客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+</head>
+
+<body>
+  <nav class="app-nav">
+  
+      
+        <a class="active" href="/.">home</a>
+        
+
+      
+  
+      
+        <a href="/archives">archive</a>
+      
+  
+      
+        <a href="/about">about</a>
+      
+  
+      
+        <a href="/atom.xml">rss</a>
+      
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2016/05/19/React-and-ES6-Small-Tips/">React and ES6 Small Tips</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">May 19 2016</p>
+  </section>
+
+  <section class="article-entry">
+    <h2 id="The-difference-between-ES5-and-ES6-in-React"><a href="#The-difference-between-ES5-and-ES6-in-React" class="headerlink" title="The difference between ES5 and ES6 in React"></a>The difference between ES5 and ES6 in React</h2><p>###1. How to create a class in react</p>
+<h4 id="ES5"><a href="#ES5" class="headerlink" title="ES5:"></a>ES5:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var comment = React.createClass(&#123;</span><br><span class="line">	render: function() &#123;</span><br><span class="line">		return (</span><br><span class="line">			&lt;div&gt;Hello&lt;/div&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6:"></a>ES6:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Comment extends React.Component &#123;</span><br><span class="line">	constructor() &#123;</span><br><span class="line">		super()</span><br><span class="line">	&#125;</span><br><span class="line">	render() &#123;</span><br><span class="line">		return (</span><br><span class="line">			&lt;div&gt;Hello&lt;/div&gt;</span><br><span class="line">		)	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###2. How to use state </p>
+<h4 id="ES5-1"><a href="#ES5-1" class="headerlink" title="ES5:"></a>ES5:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getInitialState: function() &#123;</span><br><span class="line">	this.setState(&#123;data: [&#123;author: &apos;&apos;, text: &apos;&apos;&#125;]&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ES6-1"><a href="#ES6-1" class="headerlink" title="ES6:"></a>ES6:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">constructor() &#123;</span><br><span class="line">	super()</span><br><span class="line">	this.state = &#123;data: [author: &apos;&apos;, text: &apos;&apos;]&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Small-Tips-in-React"><a href="#Small-Tips-in-React" class="headerlink" title="Small Tips in React"></a>Small Tips in React</h2><h4 id="1-没有class属性-需要使用className"><a href="#1-没有class属性-需要使用className" class="headerlink" title="1. 没有class属性, 需要使用className"></a>1. 没有class属性, 需要使用className</h4><pre><code>&lt;div className=“abc&quot;&gt;&lt;/div&gt;
+</code></pre><h4 id="2-如果两个component在同一级目录下，引用时需要在前面加"><a href="#2-如果两个component在同一级目录下，引用时需要在前面加" class="headerlink" title="2. 如果两个component在同一级目录下，引用时需要在前面加./"></a>2. 如果两个component在同一级目录下，引用时需要在前面加<code>./</code></h4><pre><code>import CommentList from ‘./comment-list&apos;
+</code></pre><h4 id="3-JS-原生函数："><a href="#3-JS-原生函数：" class="headerlink" title="3. JS 原生函数："></a>3. JS 原生函数：</h4><pre><code>setInterval(function(){***}, 500)
+</code></pre><h4 id="4-Limitation"><a href="#4-Limitation" class="headerlink" title="4. Limitation:"></a>4. <strong>Limitation:</strong></h4><pre><code>React components can only render a single root node. If you want to return multiple nodes they must be wrapped in a single root. 
+</code></pre>
+  </section>
+</article>
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> 追客 </p>
+      <p class="subtitle"> You are the JavaScript in my HTML </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <p> share it if you like it~ </p>
+    <!-- <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="DrakeLeung"
+  href="https://twitter.com/intent/tweet?text= id="The-difference-"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+ -->
+  </section>
+</div>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'drakeleung';
+  
+  var disqus_url = 'http://yoursite.com/2016/05/19/React-and-ES6-Small-Tips/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+</main>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AWS Auto-scaling Notes | 追客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/app.css">
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+</head>
+
+<body>
+  <nav class="app-nav">
+  
+      
+        <a class="active" href="/.">home</a>
+        
+
+      
+  
+      
+        <a href="/archives">archive</a>
+      
+  
+      
+        <a href="/about">about</a>
+      
+  
+      
+        <a href="/atom.xml">rss</a>
+      
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2016/05/19/AWS-Auto-scaling-Notes/">AWS Auto-scaling Notes</a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">May 19 2016</p>
+  </section>
+
+  <section class="article-entry">
+    <p>Auto Scaling helps you ensure that you have the correct number of EC2 instances available to handle the load for your application. You create collections of EC2 instances, called <code>Auto Scaling groups</code>.</p>
+<p>max-size<br>min-size<br>desired-capacity<br>scaling-policies</p>
+<h3 id="Auto-Scaling-Components"><a href="#Auto-Scaling-Components" class="headerlink" title="Auto Scaling Components"></a>Auto Scaling Components</h3><ol>
+<li><p>Groups: </p>
+<p> Your EC2 instances are originzed into <code>groups</code>.</p>
+</li>
+<li><p>Launch configurations:</p>
+<p> Your group uses a <code>launch configuration</code> as a template for its EC2 instances. When you create a launch configuration, you can specify information such as the AMI ID, instance type, security groups, and block device mapping for your instances.</p>
+</li>
+<li><p>Scaling plans:</p>
+<p> A scaling plan tells Auto Scaling when and how to scale.</p>
+</li>
+</ol>
+<h3 id="Cloud-Formation"><a href="#Cloud-Formation" class="headerlink" title="Cloud Formation"></a>Cloud Formation</h3><p>Template that describes all the AWS resources you want.</p>
+<ol>
+<li><p>Templates</p>
+<p> Describe your AWS resourcesf and their properties.</p>
+</li>
+<li><p>Stack</p>
+<p> Cloud Formation provisions the resouces that are described in your template.</p>
+<p> <a href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/" target="_blank" rel="external">Create Stack CLI</a></p>
+</li>
+</ol>
+
+  </section>
+</article>
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> 追客 </p>
+      <p class="subtitle"> You are the JavaScript in my HTML </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <p> share it if you like it~ </p>
+    <!-- <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="DrakeLeung"
+  href="https://twitter.com/intent/tweet?text=Auto Scaling helps y"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+ -->
+  </section>
+</div>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'drakeleung';
+  
+  var disqus_url = 'http://yoursite.com/2016/05/19/AWS-Auto-scaling-Notes/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+</main>
+
+</body>
+</html>
